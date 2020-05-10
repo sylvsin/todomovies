@@ -1,0 +1,126 @@
+* { 
+   box-sizing: border-box;
+}
+
+/* .container {
+   background-color: #888;
+} */
+
+body {
+   background-color: #888; 
+}
+
+nav {
+   background-color: #eee;
+   height: 3em;
+   transition: 0.4s;
+   position: fixed;
+   width: 100%;
+   top: 0;
+   z-index: 99;
+}
+
+nav ul {
+   height: 2em;
+   margin-top: 1px;
+}
+
+nav ul li {
+   list-style: none;
+   display: inline;
+   padding: 2em ;
+   
+}
+
+nav ul li a {
+   text-decoration: none;
+   color: #000;
+}
+
+nav ul li img {
+   padding-top: 10px;
+}
+
+.Products {
+   /* text-align: center; */
+   margin: 48px 20px;
+   color: #000;
+   background-color: #fff;
+   padding: 0.5em 0.5em 2em 2em;
+} 
+
+.home span ul  {
+   display: flex;
+   justify-content: space-around;
+   /* align-items: center; */
+   flex-direction: row;
+   list-style: none;
+   flex-wrap: wrap; 
+}
+
+.home span ul li {
+   text-align: center;
+   /* border: 1px solid #eee; */
+}
+
+.home span ul li:first-child {
+   padding-top: 15px;
+}
+
+.home span ul li:nth-child(2) {
+   border: 1px solid #eee;
+   margin-top: -4px;
+}
+
+.contact {
+   text-align: center;
+   
+}
+
+.contact span {
+   display: flex;
+   justify-content: center;
+   flex-direction: row;
+}
+
+.contact span ul:first-child{
+   list-style: none;
+}
+
+.contact ul:nth-child(3) {
+   padding-top: 4em;
+}
+
+.about {
+   text-align: center;
+}
+
+.footer {
+   /* position: fixed; */
+   width: 100%;
+   text-align: center;
+   background-color: #eee;
+   color: #000;
+   margin: auto;
+   height: auto;
+
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   /* width: 100%; */
+   /* background-color: red; */
+   /* color: white; */
+   /* text-align: center; */
+}
+
+.footer span {
+   padding: 10px;
+}
+
+
+
+
+
+
+
+
