@@ -1,10 +1,13 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-export default function Details() {
+function Order() {
     let { id } = useParams();
 
     return (
-        <div>Details works: {id}</div>
+        <div className="details">
+            Order works: {id}
+        </div>
     );
 }
+export default Order
