@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 // import "./Home.css";
 import { ProductContext } from "../../ProductProvider";
-import { cursorTo } from "readline";
 
 const Home: React.FC = () => {
   const { products, addToCart } = useContext(ProductContext);

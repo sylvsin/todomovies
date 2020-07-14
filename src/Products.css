@@ -150,6 +150,35 @@ nav ul li img {
 .order-wrapper {
    text-align: center;
 }
+.details {
+   text-align: center;
+}
+
+/* .contact span ul:first-child{
+   list-style: none;
+} */
+
+/* .contact ul:nth-child(3) {
+   padding-top: 4em;
+} */
+
+.todo {
+   padding-left: 22em;
+   font-family: cursive;
+}
+
+.todo p {
+   position: relative;
+   background-color: #eee;
+   width: 15em;
+}
+ 
+.todo p span {
+   right: 0.5em;
+   position: absolute; 
+   cursor: pointer; 
+   color: #ddd;
+}
 
 .footer {
    /* position: fixed; */
