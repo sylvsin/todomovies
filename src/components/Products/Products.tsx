@@ -1,48 +1,37 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+// import "./Home.css";
+import { ProductContext } from "../../ProductProvider";
+import { cursorTo } from "readline";
 
-interface IProductsState {
-    products: IProduct[];
-    loading: boolean;
-}
+const Home: React.FC = () => {
+  const { products, addToCart } = useContext(ProductContext);
 
-interface IProduct {
-    name: string;
-}
+  return (
+    <div className="content">
+        <ul>
+            {
+                products && products.map(product => (
+                        <li key={product.id}>
+                            <Link to={`/product/${product.id}`}>
+                                <img src={product.imageUrl} alt="" style={{ width:"100px", height:"100px", borderRadius:"5px"}} />
+                            </Link>
+                            <br/>
+                            Price: {product.price} $
+                            <br/>
+                            Released: {product.year}
+                            <br/>
+                            <button onClick={() => addToCart && addToCart(product)} style={{cursor: "pointer"}}>
+                                Add to cart
+                            </button>
+                            <hr/>
+                        </li>
+                    )
+                )
+            }
+        </ul>
+    </div>
+  );
+};
 
-export default class Products extends React.Component<{}, IProductsState> {
-    constructor(props: any) {
-        super(props);
-
-        this.state = {
-            products: [],
-            loading: true
-        };
-    }
-
-    async componentDidMount() {
-        let r = await fetch('http://medieinstitutet-wie-products.azurewebsites.net/api/products');
-        let data: IProduct[] = await r.json();
-
-        this.setState({
-            products: data,
-            loading: false
-        });
-    }
-
-    render() {
-        if(this.state.loading) {
-            return (
-                <div>Loading...</div>
-            );
-        }
-        
-        return (
-            <ol>
-                <h1>Movies</h1>
-                {this.state.products.map(item => {
-                    return (<li>{item.name}</li>);
-                })}
-            </ol>
-        );
-    }
-}
+export default Home;

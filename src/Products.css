@@ -42,12 +42,20 @@ nav ul li img {
 }
 
 .Products {
-   /* text-align: center; */
    margin: 48px 20px;
+   /* height: 50em; */
    color: #000;
    background-color: #fff;
    padding: 0.5em 0.5em 2em 2em;
-} 
+
+}
+
+.content ul {
+   list-style-type: none;
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+}
 
 .home span ul  {
    display: flex;
@@ -72,26 +80,74 @@ nav ul li img {
    margin-top: -4px;
 }
 
-.contact {
-   text-align: center;
-   
+.home span a {
+   text-decoration: none;
 }
 
-.contact span {
+.contact {
+   text-align: center;
+}
+
+.contact span{
    display: flex;
-   justify-content: center;
+   justify-content: space-around;
    flex-direction: row;
 }
 
-.contact span ul:first-child{
+.contact ul {
    list-style: none;
 }
 
-.contact ul:nth-child(3) {
-   padding-top: 4em;
+.contact form button {
+   width: 13em;
 }
 
-.about {
+.movies ul {
+   list-style-type: none;
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+}
+
+.movies ul li {
+   padding: 5px;
+   border: "1px solid #ddd";
+}
+
+.movies ul div {
+   text-align: center;
+}
+.details {
+   text-align: center;
+}
+
+/* .contact span ul:first-child{
+   list-style: none;
+} */
+
+/* .contact ul:nth-child(3) {
+   padding-top: 4em;
+} */
+
+.todo {
+   padding-left: 22em;
+   font-family: cursive;
+}
+
+.todo p {
+   position: relative;
+   background-color: #eee;
+   width: 15em;
+}
+ 
+.todo p span {
+   right: 0.5em;
+   position: absolute; 
+   cursor: pointer; 
+   color: #ddd;
+}
+
+.order-wrapper {
    text-align: center;
 }
 

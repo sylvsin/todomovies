@@ -6,19 +6,16 @@ export interface IHomeProps {
 
 export interface IHome {
     id: number
-    father: string
-    mom: string
-    son: string
-    daughter: string
+    website: string
     imgPath: string
+    url:string
 }
 
 export default class Home extends React.Component<IHomeProps, {}> {
     constructor(props: IHomeProps) {
         super(props);
     }
-    
-    
+
     render() {
         return (   
         <div className="home">
@@ -28,13 +25,15 @@ export default class Home extends React.Component<IHomeProps, {}> {
                 <ul>
                         
                     {
-                        this.props.myfamily.map(item => {
-                            return <label key={item.id}>
-                                <li><img src={ item.imgPath } alt='' /></li>
-                                <li> {item.father} </li>
-                                {/* <li>Mom: {item.mom}</li> 
-                                <li>Son: {item.son}</li>
-                                <li>Dauther: {item.daughter}</li> */}
+                        this.props.myfamily.map((item: IHome, Index) => {
+                            return <label key={Index}>
+                                <li>
+                                    <img src={ item.imgPath } alt='' />
+                                </li>
+
+                                <li>
+                                    <button><a href={item.url} target="_blank" rel="noopener noreferrer" > {item.website} </a></button>
+                                </li>
                             </label>
                         })
                     }
