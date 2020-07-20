@@ -6,6 +6,6 @@ export interface Product {
     year: number;
     imageUrl: string;
     isAddedToCart?: boolean;
-    loading: boolean;
-  }
+    // loading: boolean;
+}
   
