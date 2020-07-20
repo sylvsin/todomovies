@@ -13,7 +13,7 @@ export const ProductContext = React.createContext<ProductContext>({});
 export const ProductContextProvider: React.FC = ({ children }) => {
   const [products, setProducts] = useState<Product[]>([]);
   const { api } = useContext(AppContext);
-  // const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true)
  
   const addToCart = useCallback(
     product => {
@@ -46,14 +46,14 @@ export const ProductContextProvider: React.FC = ({ children }) => {
         })
         .then(data => {
           setProducts(data);
-          // setLoading(false)
+          setLoading(false)
         });
     }
   }, [api] );
 
-  // if(loading) {
-  //   return(<div style={{ textAlign: "center" }}>Loading...</div>)
-  // }
+  if(loading) {
+    return(<div style={{ textAlign: "center" }}>Loading...</div>)
+  }
 
   return (
     <ProductContext.Provider value={{ addToCart, removeFromCart, products }}>
