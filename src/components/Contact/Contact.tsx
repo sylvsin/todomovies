@@ -71,10 +71,10 @@ class Contact extends React.Component<{}, IRegisterState> {
                             <li>Typescript</li>
                             <li>React</li>
                             <li>Vue</li>
-                            <li>Angular</li>
-                            <li>Python/Django</li>
                             <li>Node.js</li>
+                            <li>Angular</li>
                             <li>Agila project</li>
+                            <li>Django</li>
                             <li>HTML</li>
                             <li>CSS</li>
                         </ul>
