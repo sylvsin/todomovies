@@ -57,6 +57,15 @@ class Contact extends React.Component<{}, IRegisterState> {
         return (
             <React.Fragment>
                 <div className="contact">
+                    <div>
+                        <h2>About</h2>
+                        <p>Home sida har för syfte att kunna presentera mina projekt <br/>
+                         med målet att befoga dem till min curriculum vitae.<br/>
+                         Och härnedan finns det mina kontaktuppgifter.
+                        </p>
+                    </div>
+                    <hr/>
+                    <h2>Contact</h2>
                     <span>
                         <ul>              
                             <h5>Mr. Sylvain</h5>
@@ -81,7 +90,7 @@ class Contact extends React.Component<{}, IRegisterState> {
 
                         <ul>
                             <form noValidate onSubmit={this.handleSubmit.bind(this)}>
-                                <h5>Register</h5>
+                                <h5>Sänd email</h5>
                                 <input type="text" value={this.state.name} onChange={this.handleChange} name="name" required placeholder="Name"/><br/>
                                 <input type="email" value={this.state.email} onChange={this.handleChange} name="email" required placeholder="Email"/><br/>
                                 <input type="checkbox" checked={this.state.isgoing} onChange={this.handleChange} name="isgoing" /><br/>
