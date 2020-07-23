@@ -69,7 +69,7 @@ class Contact extends React.Component<{}, IRegisterState> {
                     <span>
                         <ul>              
                             <h5>Mr. Sylvain</h5>
-                            <li><img src="/image/sylva3.jpg" alt=""/></li>
+                            <li><img src="/image/sylvain.jpg" alt=""/></li>
                             <li><FontAwesomeIcon className="faicons" icon='phone'/> 0735-73 69 41</li>
                             <li><FontAwesomeIcon className="faicons" icon='envelope'/> lubwimi@gmail.com</li>
                         </ul>
